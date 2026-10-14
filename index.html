@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alpine Heights Residents' Association</title>
+<meta name="description" content="News, notices, events and contacts for residents of Alpine Heights.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Familjen+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --spruce:#1F3B33;
+    --spruce-2:#2C5246;
+    --slate:#4A5A6A;
+    --stone:#E6E9E4;
+    --snow:#FBFCFA;
+    --gorse:#E3B23C;
+    --ink:#17201D;
+    --line:#C9CFC8;
+    --display:"Gloock", Georgia, serif;
+    --body:"Familjen Grotesk", system-ui, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--snow);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6}
+  a{color:var(--spruce-2);text-underline-offset:3px}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--gorse);outline-offset:3px;border-radius:2px}
+  img{max-width:100%}
+  .wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+
+  /* Header */
+  .site-head{background:var(--spruce);color:var(--snow)}
+  .site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:1rem;padding-bottom:1rem;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:.6rem;color:var(--snow);text-decoration:none;font-weight:600}
+  .brand svg{width:34px;height:22px}
+  nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1.25rem;flex-wrap:wrap}
+  nav a{color:var(--snow);text-decoration:none;opacity:.85}
+  nav a:hover{opacity:1;text-decoration:underline}
+
+  /* Hero: the ridgeline is the one bold moment */
+  .hero{background:var(--spruce);color:var(--snow);position:relative;overflow:hidden}
+  .hero .wrap{padding-top:3.5rem;padding-bottom:9rem;position:relative;z-index:1}
+  .hero h1{font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,7vw,5rem);line-height:1.02;margin:0 0 1rem;max-width:14ch;letter-spacing:-.01em}
+  .hero p{max-width:36rem;margin:0;font-size:1.15rem;opacity:.9}
+  .ridge{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:auto;display:block}
+  .ridge .far{fill:var(--spruce-2)}
+  .ridge .near{fill:var(--snow)}
+  .ridge .sun{fill:var(--gorse)}
+
+  /* Sections */
+  section{padding:3.5rem 0}
+  h2{font-family:var(--display);font-weight:400;font-size:clamp(1.8rem,4vw,2.4rem);line-height:1.15;margin:0 0 1.5rem;color:var(--spruce)}
+  h3{font-size:1.1rem;margin:0 0 .25rem}
+
+  .grid{display:grid;grid-template-columns:2fr 1fr;gap:3rem}
+  @media (max-width:760px){.grid{grid-template-columns:1fr;gap:2rem}}
+
+  .notice{border-top:1px solid var(--line);padding:1.25rem 0}
+  .notice:last-child{border-bottom:1px solid var(--line)}
+  .notice time{display:block;color:var(--slate);font-size:.9rem;margin-bottom:.15rem}
+  .notice p{margin:.35rem 0 0;max-width:62ch}
+  .notice.pinned{border-left:4px solid var(--gorse);padding-left:1rem}
+
+  .events{list-style:none;margin:0;padding:0}
+  .events li{display:flex;gap:1rem;align-items:flex-start;padding:.9rem 0;border-top:1px solid var(--line)}
+  .date{flex:0 0 3.4rem;text-align:center;background:var(--spruce);color:var(--snow);border-radius:6px;padding:.35rem 0;line-height:1.1}
+  .date b{display:block;font-family:var(--display);font-weight:400;font-size:1.5rem}
+  .date span{font-size:.8rem}
+  .events p{margin:.1rem 0 0;color:var(--slate);font-size:.95rem}
+
+  .band{background:var(--stone)}
+  .info{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem}
+  .info p{margin:.25rem 0 0;max-width:40ch}
+
+  .committee{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.5rem 2rem}
+  .committee li{border-top:2px solid var(--spruce);padding-top:.6rem}
+  .committee span{display:block;color:var(--slate);font-size:.95rem}
+
+  .contact p{max-width:44rem}
+  .button{display:inline-block;background:var(--spruce);color:var(--snow);text-decoration:none;padding:.75rem 1.25rem;border-radius:6px;font-weight:600;margin-top:.5rem}
+  .button:hover{background:var(--spruce-2)}
+
+  footer{background:var(--spruce);color:var(--snow);padding:2rem 0;font-size:.95rem}
+  footer p{margin:0;opacity:.85}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Alpine Heights home">
+      <svg viewBox="0 0 34 22" aria-hidden="true"><path d="M0 22 L11 6 L17 13 L24 3 L34 22 Z" fill="#FBFCFA"/><circle cx="28" cy="5" r="3" fill="#E3B23C"/></svg>
+      Alpine Heights
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#notices">Notices</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#info">Estate info</a></li>
+        <li><a href="#committee">Committee</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <h1>Alpine Heights Residents' Association</h1>
+      <p>Notices, events and useful information for everyone living in Alpine Heights. Run by residents, for residents.</p>
+    </div>
+    <svg class="ridge" viewBox="0 0 1440 180" preserveAspectRatio="none" aria-hidden="true">
+      <circle class="sun" cx="1180" cy="70" r="34"/>
+      <path class="far" d="M0 180 L0 120 L160 60 L280 110 L420 30 L560 100 L700 55 L860 120 L1000 40 L1150 115 L1290 70 L1440 110 L1440 180 Z"/>
+      <path class="near" d="M0 180 L0 150 L200 115 L360 150 L540 100 L720 148 L900 118 L1080 152 L1260 120 L1440 145 L1440 180 Z"/>
+    </svg>
+  </div>
+
+  <section id="notices">
+    <div class="wrap grid">
+      <div>
+        <h2>Latest notices</h2>
+        <!-- To add a notice: copy one <article> block, paste it at the top, and change the date and text.
+             Add class="notice pinned" to highlight an important one. -->
+        <article class="notice pinned">
+          <time datetime="2026-10-14">14 October 2026</time>
+          <h3>Welcome to our new website</h3>
+          <p>This is the new home for association news. Notices, meeting dates and contacts will be kept up to date here.</p>
+        </article>
+        <article class="notice">
+          <time datetime="2026-10-01">[Date]</time>
+          <h3>[Notice title]</h3>
+          <p>[A short description of the notice: road works, green area maintenance, a reminder about parking, etc.]</p>
+        </article>
+        <article class="notice">
+          <time datetime="2026-09-15">[Date]</time>
+          <h3>[Notice title]</h3>
+          <p>[Another notice.]</p>
+        </article>
+      </div>
+
+      <div id="events">
+        <h2>Upcoming</h2>
+        <!-- To add an event: copy one <li> block and update the day, month, title and details. -->
+        <ul class="events">
+          <li>
+            <div class="date"><b>[DD]</b><span>[Mon]</span></div>
+            <div><h3>Residents' meeting</h3><p>[Time] at [venue]. All residents welcome.</p></div>
+          </li>
+          <li>
+            <div class="date"><b>[DD]</b><span>[Mon]</span></div>
+            <div><h3>Estate clean-up</h3><p>[Time], meeting at [location]. Gloves and bags provided.</p></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="info" class="band">
+    <div class="wrap">
+      <h2>Estate information</h2>
+      <div class="info">
+        <div><h3>Bin collection</h3><p>[Day(s) and provider, e.g. general waste every Tuesday; recycling and compost on alternate weeks.]</p></div>
+        <div><h3>Reporting issues</h3><p>Broken street lights, potholes and illegal dumping can be reported to [your county council] or to the committee using the contact details below.</p></div>
+        <div><h3>Green areas</h3><p>[Grass cutting schedule, who maintains the green, any rules about ball games or dogs.]</p></div>
+        <div><h3>Parking</h3><p>[Any parking guidance for the estate, e.g. keeping footpaths and corners clear for emergency vehicles.]</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="committee">
+    <div class="wrap">
+      <h2>The committee</h2>
+      <ul class="committee">
+        <li><h3>James [Surname]</h3><span>Chair</span></li>
+        <li><h3>[Name]</h3><span>Secretary</span></li>
+        <li><h3>[Name]</h3><span>Treasurer</span></li>
+        <li><h3>[Name]</h3><span>Committee member</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="band contact">
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <p>Have a question, an issue to raise or an idea for the estate? Email the committee and we'll get back to you. You're also welcome at any residents' meeting.</p>
+      <!-- Change the email address below (it appears twice). -->
+      <a class="button" href="mailto:info@alpineheights.ie">Email the committee</a>
+      <p><a href="mailto:info@alpineheights.ie">info@alpineheights.ie</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; <span id="yr">2026</span> Alpine Heights Residents' Association</p>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
