@@ -86,6 +86,18 @@
   .callout p{margin:0}
   .sources{margin-top:1.5rem;font-size:.85rem;color:var(--slate);max-width:48rem}
 
+  .links{display:flex;flex-wrap:wrap;gap:.75rem;margin:0 0 2.5rem}
+  .links .button{margin-top:0}
+  .button.alt{background:transparent;color:var(--spruce);box-shadow:inset 0 0 0 2px var(--spruce)}
+  .button.alt:hover{background:var(--spruce);color:var(--snow)}
+  .table-wrap{overflow-x:auto;max-width:48rem}
+  .sales{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+  .sales th,.sales td{text-align:left;padding:.65rem .75rem .65rem 0;border-top:1px solid var(--line);white-space:nowrap}
+  .sales th{font-size:.85rem;font-weight:600;color:var(--slate);border-top:0}
+  .sales td.price,.sales th.price{text-align:right;padding-right:0}
+  .sales tr:last-child td{border-bottom:1px solid var(--line)}
+  .note{font-size:.85rem;color:var(--slate);max-width:48rem;margin-top:1rem}
+
   .committee{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.5rem 2rem}
   .committee li{border-top:2px solid var(--spruce);padding-top:.6rem}
   .committee span{display:block;color:var(--slate);font-size:.95rem}
@@ -112,6 +124,7 @@
         <li><a href="#events">Events</a></li>
         <li><a href="#info">Estate info</a></li>
         <li><a href="#history">History</a></li>
+        <li><a href="#property">Property</a></li>
         <li><a href="#committee">Committee</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -220,6 +233,42 @@
       </ol>
       <div class="callout"><p><strong>Help us tell the estate's story.</strong> If you have memories, old photos or documents from the early days of Alpine Heights, please <a href="#contact">get in touch with the committee</a>.</p></div>
       <p class="sources">Sources: Wikipedia, “Clondalkin”; Archdiocese of Dublin, Bawnogue parish; townlands.ie, Bawnoges townland; logainm.ie (Placenames Database of Ireland).</p>
+    </div>
+  </section>
+
+  <section id="property" class="band">
+    <div class="wrap">
+      <h2>Buying or selling</h2>
+      <h3>Homes for sale</h3>
+      <p style="max-width:44rem;margin:.25rem 0 1rem">Homes in Alpine Heights don't come up often. These links open the live listings for Clondalkin on Ireland's two main property sites. Look for “Alpine Heights” in the address.</p>
+      <div class="links">
+        <a class="button" href="https://www.daft.ie/property-for-sale/clondalkin-dublin" target="_blank" rel="noopener">Search Daft.ie</a>
+        <a class="button alt" href="https://www.myhome.ie/residential/dublin-22/property-for-sale-in-clondalkin" target="_blank" rel="noopener">Search MyHome.ie</a>
+      </div>
+
+      <h3>Recent sales in Alpine Heights</h3>
+      <p style="max-width:44rem;margin:.25rem 0 1rem">Sale prices recorded on the official Residential Property Price Register.</p>
+      <!-- To update: search "Alpine Heights", County Dublin on propertypriceregister.ie and add new rows at the top. -->
+      <div class="table-wrap">
+        <table class="sales">
+          <thead><tr><th>Date of sale</th><th>House</th><th class="price">Price</th></tr></thead>
+          <tbody>
+            <tr><td>05 Aug 2026</td><td>No. 146</td><td class="price">€416,000</td></tr>
+            <tr><td>01 May 2026</td><td>No. 52</td><td class="price">€320,000</td></tr>
+            <tr><td>06 Mar 2026</td><td>No. 142</td><td class="price">€400,000</td></tr>
+            <tr><td>15 Sep 2025</td><td>No. 100</td><td class="price">€410,000</td></tr>
+            <tr><td>09 Jul 2025</td><td>No. 97</td><td class="price">€355,000</td></tr>
+            <tr><td>11 Jun 2025</td><td>No. 98</td><td class="price">€428,000</td></tr>
+            <tr><td>19 Dec 2024</td><td>No. 95</td><td class="price">€355,000</td></tr>
+            <tr><td>17 Dec 2024</td><td>No. 109</td><td class="price">€380,000</td></tr>
+            <tr><td>01 Nov 2024</td><td>No. 84</td><td class="price">€377,000</td></tr>
+            <tr><td>30 Sep 2024</td><td>No. 179</td><td class="price">€355,000</td></tr>
+            <tr><td>13 Mar 2024</td><td>No. 80</td><td class="price">€348,000</td></tr>
+            <tr><td>02 Feb 2024</td><td>No. 197</td><td class="price">€420,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Source: <a href="https://www.propertypriceregister.ie/" target="_blank" rel="noopener">Residential Property Price Register</a>, sales from January 2024 to October 2026. Prices include VAT where applicable. The register doesn't record house size or type.</p>
     </div>
   </section>
 
